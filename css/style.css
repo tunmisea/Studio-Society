@@ -1,0 +1,202 @@
+/* Universal Styles */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  text-rendering: optimizeLegibility;
+  overflow-y: hidden;
+}
+
+a { text-decoration: none; }
+
+li { list-style: none; }
+
+/* Hero */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 670px;
+  background: rgba(25, 29, 34, .5);
+}
+
+
+/* Video */
+
+.vid-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+}
+
+.vid-container > video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+  overflow: hidden;
+}
+
+
+/* Navigation */
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.logo {
+  width: auto;
+  height: 50px;
+  margin-left: 11rem;
+}
+
+.main-nav > li:first-child {
+  margin-right: auto;
+}
+
+.main-nav > li {
+  text-transform: uppercase;
+  font-size: 0.80rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 3rem 4rem 0 0;
+}
+
+.signup-1 {
+  border: none;
+  background-color: #8500CA;
+  border-radius: 100px;
+  padding: 0.6rem 2.8rem;
+  color: #FFF;
+  margin-right: 7rem;
+  transition: all 0.4s;
+}
+
+.signup-1:hover {
+  color: #fff;
+  background: #7009a6;
+}
+
+
+/* Hero Text*/
+
+.hero-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hero-text > h1 {
+  color: #fff;
+  font-weight: 400;
+  font-size: 3.75rem;
+  line-height: 4.9rem;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  margin-top: 12rem;
+}
+
+.hero-text > .btn {
+  background: #8500CA;
+  border-radius: 100px;
+  padding: 1.1rem 3.8rem;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  margin-top: 3rem;
+  transition: all 0.4s;
+}
+
+.hero-text > .btn:hover {
+  background: #7009a6;
+}
+
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 1024px) {
+  .hero {
+    height: 580px;
+  }
+
+  .logo {
+    height: 50px;
+    margin-left: 5rem;
+  }
+
+  .main-nav > li {
+    font-size: 0.80rem;
+    margin: 3rem 3rem 0 0;
+  }
+
+  .signup-1 {
+    padding: 0.6rem 2rem;
+    margin-right: 2rem;
+  }
+
+  .hero-text > h1 {
+    font-size: 3rem;
+    margin-top: 9.5rem;
+  }
+
+  .hero-text > .btn {
+    padding: 1.1rem 3.8rem;
+    font-size: 0.85rem;
+    margin-top: 2rem;
+  }
+
+}
+
+
+@media only screen and (max-width: 768px) {
+  .hero {
+    height: 430px;
+  }
+
+  .logo {
+    height: 40px;
+    margin-left: 5rem;
+  }
+
+  .main-nav > li {
+    font-size: 0.7rem;
+    margin: 3rem 3rem 0 0;
+  }
+
+
+  .signup-1 {
+    display: none;
+  }
+
+  .hero-text > h1 {
+    font-size: 2rem;
+    margin-top: 6.2rem;
+  }
+
+  .hero-text > .btn {
+    padding: 0.7rem 3rem;
+    font-size: 0.85rem;
+    margin-top: 0.8rem;
+  }
